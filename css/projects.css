@@ -8,7 +8,7 @@
 
 .works {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 31.25em 31.25em 31.25em;
     grid-template-rows: 15.625em 15.625em 15.625em;
     grid-gap: 1.25em;
     justify-items: stretch;
@@ -63,7 +63,7 @@
     grid-row: 3;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1580px) {
     .work_1 {
         grid-column: 1;
         grid-row: 1;
