@@ -10,15 +10,16 @@ body {
 }
 header {
     display: flex;
+    padding: 1.25em;
     background-color: #2b4e6c;
-    padding: 1em;
     width: 100%;
+    justify-content: space-around;
 }
 
-header > nav {
-    border-radius: 0.2em;
-    padding: 0.5em;
-    text-decoration: none;
+@media (max-width: 600px) {
+    header > nav {
+        display: none;
+    }
 }
 
 nav > a {
