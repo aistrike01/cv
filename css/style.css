@@ -10,10 +10,11 @@ body {
 }
 header {
     display: flex;
-    padding: 1.25em;
+    height: 50px;
     background-color: #2b4e6c;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width: 600px) {

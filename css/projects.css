@@ -8,12 +8,11 @@
 
 .works {
     display: grid;
-    grid-template-columns: 31.25em 31.25em 31.25em;
-    grid-template-rows: 15.625em 15.625em 15.625em;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1.25em;
     justify-items: stretch;
     align-items: stretch;
-    width: 93.75em;
+    width: 100%;
 }
 
 .work {
@@ -64,6 +63,9 @@
 }
 
 @media (max-width: 1580px) {
+    .works {
+        grid-template-columns: 1fr 1fr;
+    }
     .work_1 {
         grid-column: 1;
         grid-row: 1;
@@ -102,7 +104,10 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
+    .works {
+        grid-template-columns: 1fr;
+    }
     .work_1 {
         grid-column: 1;
         grid-row: 1;
