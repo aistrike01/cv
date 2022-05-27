@@ -23,6 +23,7 @@
     color: #e7eef3;
     background-color: #2b4e6c;
     width: 100%;
+    min-height: 300px;
     height: 100%;
 }
 .work_1 {
