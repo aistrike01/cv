@@ -29,9 +29,9 @@ nav > a {
     font-size: 48px;
     padding: 2em;
 }
-
+/* 
 @media (max-width: 600px) {
     header > nav {
         display: none;
     }
-}
+} */
