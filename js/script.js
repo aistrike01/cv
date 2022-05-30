@@ -1,6 +1,6 @@
 /// Переключение меню бургера и блокировка скролла
-let headerBurger = document.querySelector(".header__burger");
-let headerMenu = document.querySelector(".header__menu");
+const headerBurger = document.querySelector(".header__burger");
+const headerMenu = document.querySelector(".header__menu");
 
 let toggle = false;
 
