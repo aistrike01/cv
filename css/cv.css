@@ -24,7 +24,7 @@ hr {
     padding: 0.625em;
 }
 
-.header {
+.header__cv {
     width: 100%;
     display: grid;
     grid-template-columns: 15em 25em 1fr;
