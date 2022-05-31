@@ -13,38 +13,58 @@ hr {
     display: flex;
     justify-content: center;
     background-color: #e6ecf2;
+    margin: 100px 0 0 0;
 }
 
 .information {
     display: flex;
     width: 800px;
-    padding: 100px 0 0 0;
     background-color: #dce2e8;
     flex-direction: column;
     align-items: center;
 }
 
 .information__header {
-    width: 100%;
+    width: 700px;
     display: grid;
-    grid-template-columns: 240px 400px 1fr;
-    grid-template-rows: 240px 100px;
-    padding: 0 0 25px 25px;
+    grid-template-areas:
+        "avatar name"
+        "describe describe";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 300px 1fr;
+}
+@media (max-width: 767px) {
+    .main {
+        margin: 70px 0 0 0;
+    }
+    .information__header {
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "avatar"
+            "name"
+            "describe";
+        grid-template-columns: 1fr;
+    }
+    .avatar {
+        width: 100%;
+    }
+    .fullname {
+        align-items: center;
+    }
 }
 
 .avatar {
-    width: 15em;
-    height: 15em;
-    grid-column: 1;
-    grid-row: 1/3;
+    max-width: 300px;
+    grid-area: avatar;
+    margin: auto;
 }
 
 .fullname {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    grid-column: 2;
-    grid-row: 1/2;
+    grid-area: name;
     font-size: 36px;
     padding: 15px 15px 15px 25px;
 }
@@ -52,9 +72,8 @@ hr {
 .describe {
     padding: 15px;
     display: flex;
-    grid-column: 1/3;
-    grid-row: 2;
-    font-size: 18px;
+    grid-area: describe;
+    font-size: 20px;
 }
 
 .paragraph {
