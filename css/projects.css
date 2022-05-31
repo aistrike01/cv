@@ -34,14 +34,20 @@
     color: #e7eef3;
     background-color: #406680;
     width: 100%;
-    min-width: 150px;
+    min-width: 230px;
+    height: 100%;
     max-height: 300px;
+    flex-direction: column;
 }
 
 .work a {
     text-decoration: none;
     color: #e7eef3;
     font-size: 36px;
+}
+
+.work img {
+    width: 50px;
 }
 
 @media (max-width: 1580px) {
