@@ -1,15 +1,16 @@
-const works = document.querySelector(".works");
-const alert = document.querySelector(".works-alert");
-
 /// Запрос репозиториев с GitHub API и добавление их на страницу
 
-function addWork(name, url, type) {
+function addWork(name, url, language) {
+    const works = document.querySelector(".works");
     const work = document.createElement("div");
     const workLink = document.createElement("a");
     const img = document.createElement("img");
+    const type = language.toLowerCase();
 
-    img.alt = "type";
-    img.src = `../img/code-languages/${type.toLowerCase()}.png`;
+    img.alt = language;
+    if (type === "typescript" || type == "javascript") {
+        img.src = `../img/code-languages/${type}.png`;
+    }
     work.classList.add("work");
     workLink.href = url;
     workLink.textContent = name.replace(/aistrike01\//g, "");
@@ -20,6 +21,8 @@ function addWork(name, url, type) {
 }
 
 async function getRepos() {
+    const alert = document.querySelector(".works-alert");
+
     const reposList = await fetch(`https://api.github.com/users/aistrike01/repos`, {
         method: "GET",
     }).then(function (response) {
@@ -38,5 +41,11 @@ async function getRepos() {
         addWork(element.full_name, element.html_url, element.language);
     }
 }
+
+/// Смена языка
+
+function changeLanguage() {}
+
+//! Functions Calling
 
 getRepos();

@@ -1,4 +1,11 @@
-hr {
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: #e6ecf2;
+    margin: 80px 0 0 0;
+}
+
+.main hr {
     width: 65%;
     margin: auto;
     padding-bottom: 1em;
@@ -7,13 +14,6 @@ hr {
     color: #1a2933;
     overflow: visible;
     height: 0.3em;
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    background-color: #e6ecf2;
-    margin: 100px 0 0 0;
 }
 
 .information {
@@ -33,9 +33,66 @@ hr {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 300px 1fr;
 }
+
+.avatar {
+    max-width: 300px;
+    grid-area: avatar;
+    margin: auto;
+}
+
+.fullname {
+    display: flex;
+    color: #1a2933;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: name;
+    font-size: 36px;
+    padding: 15px 15px 15px 25px;
+}
+
+.describe {
+    padding: 15px;
+    display: flex;
+    grid-area: describe;
+    font-size: 20px;
+    color: #1a2933;
+}
+
+.paragraph {
+    display: flex;
+    align-items: center;
+    border-left: 3px solid #1a2933;
+    padding-left: 12px;
+    height: 100%;
+}
+
+.information__contacts {
+    padding-bottom: 2em;
+    width: 700px;
+}
+
+.contacts__header {
+    color: #1a2933;
+    font-size: 36px;
+}
+
+.contacts {
+    font-size: 20px;
+    color: #1a2933;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #1a2933;
+}
+
+.contact {
+    margin: 10px 0;
+}
+
 @media (max-width: 767px) {
     .main {
-        margin: 70px 0 0 0;
+        margin: 50px 0 0 0;
     }
     .information__header {
         width: 100%;
@@ -52,49 +109,15 @@ hr {
     .fullname {
         align-items: center;
     }
+    .describe {
+        padding: 30px;
+    }
+    .information__contacts {
+        padding-bottom: 2em;
+        width: 100%;
+        padding: 0 30px;
+    }
 }
-
-.avatar {
-    max-width: 300px;
-    grid-area: avatar;
-    margin: auto;
-}
-
-.fullname {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    grid-area: name;
-    font-size: 36px;
-    padding: 15px 15px 15px 25px;
-}
-
-.describe {
-    padding: 15px;
-    display: flex;
-    grid-area: describe;
-    font-size: 20px;
-}
-
-.paragraph {
-    display: flex;
-    align-items: center;
-    border-left: 3px solid #1a2933;
-    padding-left: 12px;
-    height: 100%;
-}
-
-.information__contacts {
-    padding-bottom: 2em;
-    width: 100%;
-}
-.contacts__header {
-    font-size: 36px;
-    margin: 0px 0px 15px 25px;
-}
-.contact {
-}
-
 .experience {
     padding-bottom: 2em;
     width: 100%;
