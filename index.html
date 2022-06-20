@@ -4,25 +4,24 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Артем Аніськін</title>
-        <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+        <title>Артем Аніськін | Резюме</title>
+        <link rel="icon" href="../img/logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
     <body>
+        <!-- / Навигация -->
+
         <header class="header">
             <div class="container">
                 <div class="header__body">
                     <nav class="header__menu">
                         <ul class="header__list">
                             <li>
-                                <a href="index.html" class="header__link">Головна</a>
+                                <a href="../index.html" class="header__link">Головна</a>
                             </li>
                             <li>
-                                <a href="./pages/projects.html" class="header__link">Роботи</a>
-                            </li>
-                            <li>
-                                <a href="./pages/cv.html" class="header__link">Портфоліо</a>
+                                <a href="../pages/projects.html" class="header__link">Роботи</a>
                             </li>
                         </ul>
                     </nav>
@@ -30,19 +29,106 @@
                         <span></span>
                     </div>
                     <a href="#" class="header__language">
-                        <img src="./img/languages/en.jpg" alt="languages" />
+                        <img src="../img/languages/en.jpg" alt="languages" />
                     </a>
                 </div>
             </div>
         </header>
 
-        <div class="content">Ласкаво прошу!</div>
-        <!-- <div class="menu">
-            <ul class="menu__list">
-                <li><a href="#" class="menu__link">English</a></li>
-                <li><a href="#" class="menu__link">Українська</a></li>
-            </ul>
-        </div> -->
-        <script src="./js/script.js"></script>
+        <!-- / Контент -->
+
+        <div class="main">
+            <div class="information">
+                <div class="information__header">
+                    <img class="avatar" src="/img/cv-avatar.jpeg" alt="my avatar" />
+                    <h1 class="fullname">
+                        <p>Аніськін</p>
+                        <p>Артем</p>
+                        <p>Олексійович</p>
+                    </h1>
+
+                    <div class="describe">
+                        <p class="paragraph">
+                            Front-end програміст зі стажем стажем. Пишу сайти та веб-додатки на
+                            JavaScript та TypeScript. Використовую як нативний JavaScript, так і
+                            різні JS фреймворки.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="information__contacts">
+                    <h2 class="contacts__header">Контакти</h2>
+                    <div class="contacts">
+                        <p class="contact">📧 artemaniskin01@gmail.com</p>
+                        <p class="contact">☎️ +380685790079</p>
+                        <p class="contact">
+                            <strong>
+                                <a href="https://www.linkedin.com/in/artem-aniskin/"
+                                    >🔗 LinkedIn</a
+                                ></strong
+                            >
+                        </p>
+                        <p class="contact">
+                            <strong><a href="https://github.com/aistrike01">🔗 GitHub</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- 
+                <div class="information__block experience">
+                    <h2 class="information__h2">👨‍💻 Опыт работы</h2>
+                    <h3 class="information__h3">Front-end разработчик</h3>
+                    <p class="experience__date">НЗФ, Никополь– 03.03.2021 - Текущее время</p>
+                    <p class="experience__describe">Разработка документооборота на React.</p>
+                </div>
+                
+                <hr />
+
+                <div class="information__block skills">
+                    <h2 class="information__h2">🛠 Навыки</h2>
+                    <h3 class="information__h3">💻 Технологии</h3>
+                    <h4 class="information__h4">Основные:</h4>
+                    <h5 class="information__h5">HTML ⭐️⭐️⭐️⭐️</h5>
+                    <p>SEO+Meta оптимизация.</p>
+                    <h5 class="information__h5">CSS ⭐️⭐️⭐️⭐️</h5>
+                    <p>SASS/LESS. Flex, grid.</p>
+                    <h5 class="information__h5">Javascript/TypeScript ⭐️⭐️⭐️⭐️</h5>
+                    <p>ES5, ES7.</p>
+                    <h5 class="information__h5">Git ⭐️⭐️⭐️⭐️</h5>
+                    <h5 class="information__h5">Regex ⭐️⭐️⭐️</h5>
+                    <p>Пишу и понимаю регулярные выражения на базовом уровне.</p>
+                    <h4>Фреймворки:</h4>
+                    <h5 class="information__h5">React ⭐️⭐️⭐️⭐️</h5>
+                    <h4 class="information__h4">Библиотеки:</h4>
+                    <h5 class="information__h5">Material UI ⭐️⭐️⭐️</h5>
+                    <h5 class="information__h5">Redux ⭐️⭐️⭐️</h5>
+                    <h5 class="information__h5">Mobx ⭐️⭐️</h5>
+                    <h5 class="information__h5">SWR ⭐️⭐️</h5>
+                    <hr />
+                    <h4 class="information__h4">🗣 Языки</h4>
+                    <h5 class="information__h5">Английский 🇬🇧</h5>
+                    <p>B1 (Плохой разговорный)</p>
+                    <h5 class="information__h5">Украинский 🇺🇦</h5>
+                    <p>C2</p>
+                </div>
+
+                <div class="information__block education">
+                    <h2 class="information__h2">📚 Образование</h2>
+                    <h3 class="information__h3">👨‍💻Колледж Современного Управления</h3>
+                    <p class="education__level">Среднее специальное</p>
+                    <p class="education__years">2016-2020</p>
+                    <p class="education__direction">
+                        <strong>Прикладная информатика</strong> - Техник-программист
+                    </p>
+
+                    <h3 class="information__h3">
+                        🧑‍🎓Национальная металлургическая академия Украины
+                    </h3>
+                    <p class="education__level">Бакалавр</p>
+                    <p class="education__years">2021-2023</p>
+                    <p class=""><strong>Прикладная информатика</strong> - Инженер-программист</p>
+                </div> -->
+            </div>
+        </div>
+        <script src="../js/script.js"></script>
     </body>
 </html>
