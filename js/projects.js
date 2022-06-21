@@ -13,6 +13,7 @@ function addWork(name, url, language) {
     }
     work.classList.add("work");
     workLink.href = url;
+    workLink.target = "_blank";
     workLink.textContent = name.replace(/aistrike01\//g, "");
 
     work.append(workLink);

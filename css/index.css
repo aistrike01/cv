@@ -8,12 +8,12 @@
 .main hr {
     width: 65%;
     margin: auto;
-    padding-bottom: 1em;
+    padding-bottom: 16px;
     border: none;
     border-top: 3px solid #1a2933;
     color: #1a2933;
     overflow: visible;
-    height: 0.3em;
+    height: 5px;
 }
 
 .information {
@@ -42,7 +42,6 @@
 
 .fullname {
     display: flex;
-    color: #1a2933;
     flex-direction: column;
     justify-content: space-around;
     grid-area: name;
@@ -55,7 +54,6 @@
     display: flex;
     grid-area: describe;
     font-size: 20px;
-    color: #1a2933;
 }
 
 .paragraph {
@@ -67,28 +65,75 @@
 }
 
 .information__contacts {
-    padding-bottom: 2em;
+    padding-bottom: 20px;
     width: 700px;
 }
 
 .contacts__header {
-    color: #1a2933;
     font-size: 36px;
 }
 
 .contacts {
     font-size: 20px;
-    color: #1a2933;
 }
 
 .contacts a {
     text-decoration: none;
-    color: #1a2933;
 }
 
 .contact {
     margin: 10px 0;
 }
+
+.information__experience {
+    padding: 0 0 20px 0;
+    width: 700px;
+}
+.information__h2 {
+    font-size: 36px;
+    padding: 0 0 12px 0;
+}
+.information__h3 {
+    font-size: 26px;
+    padding: 0 0 12px 0;
+}
+.experience__date {
+    color: #1a2933;
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
+.experience__describe {
+    color: #1a2933;
+    font-size: 18px;
+}
+.information__skills {
+    padding-bottom: 20px;
+    width: 700px;
+}
+.information__education {
+    padding-bottom: 20px;
+    width: 700px;
+}
+.information__h4 {
+    font-size: 24px;
+    padding: 0 0 12px 0;
+}
+.information__h5 {
+    font-size: 20px;
+    padding: 0 0 12px 0;
+}
+.information__skills p {
+    font-size: 20px;
+    padding: 0 0 12px 0;
+}
+.information__education p {
+    font-size: 20px;
+    padding: 0 0 12px 0;
+}
+.technologies {
+    padding: 0 0 15px;
+}
+/*/ MOBILE RESPONSIVE */
 
 @media (max-width: 767px) {
     .main {
@@ -103,6 +148,22 @@
             "describe";
         grid-template-columns: 1fr;
     }
+    .information__contacts {
+        width: 100%;
+        padding: 0 30px 20px 30px;
+    }
+    .information__experience {
+        width: 100%;
+        padding: 0 30px 20px 30px;
+    }
+    .information__skills {
+        width: 100%;
+        padding: 0 30px 20px 30px;
+    }
+    .information__education {
+        width: 100%;
+        padding: 0 30px 30px 30px;
+    }
     .avatar {
         width: 100%;
     }
@@ -112,23 +173,4 @@
     .describe {
         padding: 30px;
     }
-    .information__contacts {
-        padding-bottom: 2em;
-        width: 100%;
-        padding: 0 30px;
-    }
-}
-.experience {
-    padding-bottom: 2em;
-    width: 100%;
-}
-
-.skills {
-    padding-bottom: 2em;
-    width: 100%;
-}
-
-.education {
-    padding-bottom: 2em;
-    width: 100%;
 }
