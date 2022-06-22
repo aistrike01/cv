@@ -8,12 +8,14 @@ function addWork(name, url, language) {
     const type = language.toLowerCase();
 
     img.alt = language;
+    img.classList.add("work__image");
     if (type === "typescript" || type == "javascript") {
         img.src = `../img/code-languages/${type}.png`;
     }
     work.classList.add("work");
     workLink.href = url;
     workLink.target = "_blank";
+    workLink.classList.add("work__link");
     workLink.textContent = name.replace(/aistrike01\//g, "");
 
     work.append(workLink);

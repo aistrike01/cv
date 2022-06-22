@@ -15,46 +15,51 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
-    <body>
+    <body class="body">
         <!-- / Навигация -->
-
-        <header class="header">
-            <div class="container">
-                <div class="header__body">
-                    <nav class="header__menu">
-                        <ul class="header__list">
-                            <li>
-                                <a href="../index.html" class="header__link">Головна</a>
-                            </li>
-                            <li>
-                                <a href="../pages/projects.html" class="header__link">Роботи</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="header__burger">
-                        <span></span>
+        <div class="header-container">
+            <header class="header">
+                <div class="container">
+                    <div class="header__body">
+                        <nav class="header__menu">
+                            <ul class="header__list">
+                                <li>
+                                    <a href="../index.html" class="header__link">Головна</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/projects.html" class="header__link">Роботи</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <a href="#" class="header__language">
+                            <img src="../img/languages/en.jpg" alt="languages" />
+                        </a>
                     </div>
-                    <a href="#" class="header__language">
-                        <img src="../img/languages/en.jpg" alt="languages" />
-                    </a>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
 
         <!-- / Контент -->
 
-        <div class="main">
+        <div class="content">
             <div class="information">
-                <div class="information__header">
-                    <img class="avatar" src="/img/cv-avatar.jpeg" alt="my avatar" />
-                    <h1 class="fullname">
+                <div class="information__block information-header">
+                    <img
+                        class="information-header__avatar"
+                        src="/img/cv-avatar.jpeg"
+                        alt="my avatar"
+                    />
+                    <h1 class="information-header__fullname">
                         <p>Аніськін</p>
                         <p>Артем</p>
                         <p>Олексійович</p>
                     </h1>
 
-                    <div class="describe">
-                        <p class="paragraph">
+                    <div class="information-header__description">
+                        <p class="information-header__paragraph">
                             Front-end програміст зі стажем стажем. Пишу сайти та веб-додатки на
                             JavaScript та TypeScript. Використовую як нативний JavaScript, так і
                             різні JS фреймворки.
@@ -62,83 +67,104 @@
                     </div>
                 </div>
 
-                <div class="information__contacts">
-                    <h2 class="contacts__header">Контакти</h2>
-                    <div class="contacts">
-                        <p class="contact">📧 artemaniskin01@gmail.com</p>
-                        <p class="contact">☎️ +380685790079</p>
-                        <p class="contact">
+                <div class="information__block information-contacts">
+                    <h2 class="information-contacts__header">Контакти</h2>
+                    <div class="information-contacts__contacts">
+                        <p class="information-contacts__contact">📧 artemaniskin01@gmail.com</p>
+                        <p class="information-contacts__contact">☎️ +380685790079</p>
+                        <p class="information-contacts__contact">
                             <strong>
-                                <a href="https://www.linkedin.com/in/artem-aniskin/" target="_blank"
+                                <a
+                                    class="information-contacts__link"
+                                    href="https://www.linkedin.com/in/artem-aniskin/"
+                                    target="_blank"
                                     >🔗 LinkedIn</a
                                 ></strong
                             >
                         </p>
-                        <p class="contact">
+                        <p class="information-contacts__contact">
                             <strong
-                                ><a href="https://github.com/aistrike01" target="_blank"
+                                ><a
+                                    class="information-contacts__link"
+                                    href="https://github.com/aistrike01"
+                                    target="_blank"
                                     >🔗 GitHub</a
                                 ></strong
                             >
                         </p>
                     </div>
                 </div>
-                <div class="information__experience">
-                    <h2 class="information__h2">Досвід роботи</h2>
-                    <h3 class="information__h3">Front-end розробник</h3>
-                    <p class="experience__date">
+
+                <div class="information__block information-experience">
+                    <h2 class="information-experience__title">Досвід роботи</h2>
+                    <h3 class="information-experience__job-title">Front-end розробник</h3>
+                    <p class="information-experience__date">
                         АТ "НЗФ", м. Нікополь <strong>–</strong> 03.03.2021 - Теперішній час
                     </p>
-                    <p class="experience__describe">Розробка документообігу на React.</p>
+                    <p class="information-experience__description">
+                        Розробка документообігу на React.
+                    </p>
                 </div>
 
-                <hr />
+                <hr class="hr" />
 
-                <div class="information__skills">
-                    <h2 class="information__h2">Навыки</h2>
-                    <div class="technologies">
-                        <h3 class="information__h3">Технологии</h3>
-                        <h4 class="information__h4">Основные:</h4>
-                        <h5 class="information__h5">HTML ⭐️⭐️⭐️⭐️</h5>
-                        <p>SEO+Meta оптимизация.</p>
-                        <h5 class="information__h5">CSS ⭐️⭐️⭐️⭐️</h5>
-                        <p>SASS/LESS. Flex, grid.</p>
-                        <h5 class="information__h5">Javascript/TypeScript ⭐️⭐️⭐️⭐️</h5>
-                        <p>ES5, ES7.</p>
-                        <h5 class="information__h5">Git ⭐️⭐️⭐️⭐️</h5>
-                        <h5 class="information__h5">Regex ⭐️⭐️⭐️</h5>
-                        <p>Пишу и понимаю регулярные выражения на базовом уровне.</p>
-                        <h4 class="information__h4">Фреймворки:</h4>
-                        <h5 class="information__h5">React ⭐️⭐️⭐️⭐️</h5>
-                        <h4 class="information__h4">Библиотеки:</h4>
-                        <h5 class="information__h5">Material UI ⭐️⭐️⭐️</h5>
-                        <h5 class="information__h5">Redux ⭐️⭐️⭐️</h5>
-                        <h5 class="information__h5">Mobx ⭐️⭐️</h5>
-                        <h5 class="information__h5">SWR ⭐️⭐️</h5>
+                <div class="information__block information-skills">
+                    <h2 class="information-skills__title">Навыки</h2>
+                    <div class="information-skills__technologies">
+                        <h3 class="information-skills__skills-title">Технологии</h3>
+                        <h4 class="information-skills__skills-subtitle">Основные:</h4>
+                        <h5 class="information-skills__skill">HTML ⭐️⭐️⭐️⭐️</h5>
+                        <p class="information-skills__skill-description">SEO+Meta оптимизация.</p>
+                        <h5 class="information-skills__skill">CSS ⭐️⭐️⭐️⭐️</h5>
+                        <p class="information-skills__skill-description">SASS/LESS. Flex, grid.</p>
+                        <h5 class="information-skills__skill">
+                            Javascript/TypeScript ⭐️⭐️⭐️⭐️
+                        </h5>
+                        <p class="information-skills__skill-description">ES5, ES7.</p>
+                        <h5 class="information-skills__skill">Git ⭐️⭐️⭐️⭐️</h5>
+                        <h5 class="information-skills__skill">Regex ⭐️⭐️⭐️</h5>
+                        <p class="information-skills__skill-description">
+                            Пишу и понимаю регулярные выражения на базовом уровне.
+                        </p>
+                        <h4 class="information-skills__skills-subtitle">Фреймворки:</h4>
+                        <h5 class="information-skills__skill">React ⭐️⭐️⭐️⭐️</h5>
+                        <h4 class="information-skills__skills-subtitle">Библиотеки:</h4>
+                        <h5 class="information-skills__skill">Material UI ⭐️⭐️⭐️</h5>
+                        <h5 class="information-skills__skill">Redux ⭐️⭐️⭐️</h5>
+                        <h5 class="information-skills__skill">Mobx ⭐️⭐️</h5>
+                        <h5 class="information-skills__skill">SWR ⭐️⭐️</h5>
                     </div>
-
-                    <hr />
-
-                    <h4 class="information__h3">Языки</h4>
-                    <h5 class="information__h4">Английский</h5>
-                    <p>B1</p>
-                    <h5 class="information__h4">Украинский</h5>
-                    <p>C2</p>
+                    <div class="information-skills__languages">
+                        <h4 class="information-skills__skills-title">Языки</h4>
+                        <h5 class="information-skills__skills-subtitle">Английский</h5>
+                        <p class="information-skills__skill-description">B1</p>
+                        <h5 class="information-skills__skills-subtitle">Украинский</h5>
+                        <p class="information-skills__skill-description">C2</p>
+                    </div>
                 </div>
 
-                <div class="information__education">
-                    <h2 class="information__h2">Образование</h2>
-                    <h3 class="information__h3">Колледж Современного Управления</h3>
-                    <p class="education__level">Среднее специальное</p>
-                    <p class="education__years">2016-2020</p>
-                    <p class="education__direction">
+                <hr class="hr" />
+
+                <div class="information__block information-education">
+                    <h2 class="information-education__title">Образование</h2>
+
+                    <h3 class="information-education__institution">
+                        Колледж Современного Управления
+                    </h3>
+                    <p class="information-education__description">Среднее специальное</p>
+                    <p class="information-education__description">2016-2020</p>
+                    <p class="information-education__description">
                         <strong>Прикладная информатика</strong> - Техник-программист
                     </p>
 
-                    <h3 class="information__h3">Национальная металлургическая академия Украины</h3>
-                    <p class="education__level">Бакалавр</p>
-                    <p class="education__years">2021-2023</p>
-                    <p class=""><strong>Прикладная информатика</strong> - Инженер-программист</p>
+                    <h3 class="information-education__institution">
+                        Национальная металлургическая академия Украины
+                    </h3>
+                    <p class="information-education__description">Бакалавр</p>
+                    <p class="information-education__description">2021-2023</p>
+                    <p class="information-education__description">
+                        <strong>Прикладная информатика</strong> - Инженер-программист
+                    </p>
                 </div>
             </div>
         </div>

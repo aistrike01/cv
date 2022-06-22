@@ -40,13 +40,13 @@
     flex-direction: column;
 }
 
-.work a {
+.work__link {
     text-decoration: none;
     color: #e7eef3;
     font-size: 36px;
 }
 
-.work img {
+.work__image {
     width: 50px;
 }
 

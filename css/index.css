@@ -1,19 +1,6 @@
-.main {
+.content {
     display: flex;
     justify-content: center;
-    background-color: #e6ecf2;
-    margin: 80px 0 0 0;
-}
-
-.main hr {
-    width: 65%;
-    margin: auto;
-    padding-bottom: 16px;
-    border: none;
-    border-top: 3px solid #1a2933;
-    color: #1a2933;
-    overflow: visible;
-    height: 5px;
 }
 
 .information {
@@ -24,153 +11,174 @@
     align-items: center;
 }
 
-.information__header {
+.information__block {
     width: 700px;
+    padding: 0 0 15px 0;
+}
+
+.hr {
+    width: 65%;
+    padding-bottom: 16px;
+    border: none;
+    border-top: 3px solid #1a2933;
+    color: #1a2933;
+    overflow: visible;
+    height: 5px;
+}
+
+/*/ HEADER */
+
+.information-header {
     display: grid;
     grid-template-areas:
         "avatar name"
-        "describe describe";
+        "description description";
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 300px 1fr;
 }
 
-.avatar {
+.information-header__avatar {
     max-width: 300px;
     grid-area: avatar;
     margin: auto;
 }
-
-.fullname {
+.information-header__fullname {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     grid-area: name;
     font-size: 36px;
     padding: 15px 15px 15px 25px;
+    color: #1a2933;
 }
-
-.describe {
-    padding: 15px;
+.information-header__description {
     display: flex;
-    grid-area: describe;
+    padding: 15px;
+    grid-area: description;
     font-size: 20px;
+    line-height: 1.6;
 }
-
-.paragraph {
+.information-header__paragraph {
     display: flex;
     align-items: center;
     border-left: 3px solid #1a2933;
     padding-left: 12px;
     height: 100%;
+    color: #1a2933;
 }
 
-.information__contacts {
-    padding-bottom: 20px;
-    width: 700px;
-}
+/*/ CONTACTS */
 
-.contacts__header {
+.information-contacts__header {
+    color: #1a2933;
     font-size: 36px;
+    padding: 0 0 10px 0;
 }
-
-.contacts {
-    font-size: 20px;
-}
-
-.contacts a {
+.information-contacts__link {
+    color: #1a2933;
     text-decoration: none;
 }
-
-.contact {
-    margin: 10px 0;
+.information-contacts__contact {
+    color: #1a2933;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
-.information__experience {
-    padding: 0 0 20px 0;
-    width: 700px;
-}
-.information__h2 {
+/*/ EXPERIENCE */
+
+.information-experience__title {
+    color: #1a2933;
     font-size: 36px;
     padding: 0 0 12px 0;
 }
-.information__h3 {
+.information-experience__job-title {
+    color: #1a2933;
     font-size: 26px;
     padding: 0 0 12px 0;
 }
-.experience__date {
+.information-experience__date {
     color: #1a2933;
     font-size: 20px;
     padding: 0 0 10px 0;
 }
-.experience__describe {
+.information-experience__description {
     color: #1a2933;
     font-size: 18px;
 }
-.information__skills {
-    padding-bottom: 20px;
-    width: 700px;
+
+/*/ SKILLS */
+
+.information-skills__title {
+    color: #1a2933;
+    font-size: 36px;
+    padding: 0 0 12px 0;
 }
-.information__education {
-    padding-bottom: 20px;
-    width: 700px;
+.information-skills__skills-title {
+    color: #1a2933;
+    font-size: 26px;
+    padding: 0 0 12px 0;
 }
-.information__h4 {
+.information-skills__skills-subtitle {
+    color: #1a2933;
     font-size: 24px;
     padding: 0 0 12px 0;
 }
-.information__h5 {
+.information-skills__skill {
+    color: #1a2933;
     font-size: 20px;
     padding: 0 0 12px 0;
 }
-.information__skills p {
+.information-skills__skill-description {
+    color: #1a2933;
     font-size: 20px;
     padding: 0 0 12px 0;
 }
-.information__education p {
-    font-size: 20px;
-    padding: 0 0 12px 0;
-}
-.technologies {
+.information-skills__technologies {
     padding: 0 0 15px;
 }
+
+/*/ EDUCATION */
+
+.information-education__title {
+    color: #1a2933;
+    font-size: 36px;
+    padding: 0 0 12px 0;
+}
+.information-education__institution {
+    color: #1a2933;
+    font-size: 26px;
+    padding: 0 0 12px 0;
+}
+.information-education__description {
+    color: #1a2933;
+    font-size: 20px;
+    padding: 0 0 12px 0;
+}
+
 /*/ MOBILE RESPONSIVE */
 
 @media (max-width: 767px) {
-    .main {
-        margin: 50px 0 0 0;
-    }
-    .information__header {
+    .information__block {
         width: 100%;
+        padding: 0 15px 15px 15px;
+    }
+    .information-header {
         display: grid;
         grid-template-areas:
             "avatar"
             "name"
-            "describe";
+            "description";
         grid-template-columns: 1fr;
     }
-    .information__contacts {
-        width: 100%;
-        padding: 0 30px 20px 30px;
-    }
-    .information__experience {
-        width: 100%;
-        padding: 0 30px 20px 30px;
-    }
-    .information__skills {
-        width: 100%;
-        padding: 0 30px 20px 30px;
-    }
-    .information__education {
-        width: 100%;
-        padding: 0 30px 30px 30px;
-    }
-    .avatar {
+    .information-header__avatar {
         width: 100%;
     }
-    .fullname {
+    .information-header__fullname {
         align-items: center;
+        padding: 15px 0 0 0;
     }
-    .describe {
-        padding: 30px;
+    .information-contacts__contact {
+        font-size: 18px;
+        line-height: 1.8;
     }
 }
