@@ -45,10 +45,6 @@ async function getRepos() {
     }
 }
 
-/// Смена языка
-
-function changeLanguage() {}
-
 //! Functions Calling
 
 getRepos();
