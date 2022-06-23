@@ -36,7 +36,7 @@ async function getRepos() {
     });
 
     if (reposList.length === 0) {
-        alert.classList.add("active");
+        alert.classList.add("works-alert_active");
     }
 
     for (let i = 0; i < reposList.length; i++) {

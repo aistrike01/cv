@@ -5,10 +5,10 @@
 
 .information {
     display: flex;
-    width: 800px;
-    background-color: #dce2e8;
     flex-direction: column;
     align-items: center;
+    width: 800px;
+    background-color: #dce2e8;
 }
 
 .information__block {

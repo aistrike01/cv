@@ -1,8 +1,7 @@
 .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: #e7eef3;
-    height: 100em;
     margin: 0 100px;
     padding: 25px 0px 50px 0px;
 }
@@ -18,13 +17,13 @@
 }
 .works-alert {
     display: none;
-}
-.works-alert.active {
-    display: block;
     font-size: 48px;
     width: 250px;
     color: #1a2933;
     margin: auto;
+}
+.works-alert_active {
+    display: block;
 }
 
 .work {
