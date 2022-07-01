@@ -7,10 +7,11 @@ function addWork(name, url, language) {
     const img = document.createElement("img");
     const type = language.toLowerCase();
 
-    img.alt = language;
-    img.classList.add("work__image");
     if (type === "typescript" || type == "javascript") {
+        img.alt = type;
+        img.classList.add("work__image");
         img.src = `../img/code-languages/${type}.png`;
+        work.append(img);
     }
     work.classList.add("work");
     workLink.href = url;
@@ -19,7 +20,6 @@ function addWork(name, url, language) {
     workLink.textContent = name.replace(/aistrike01\//g, "");
 
     work.append(workLink);
-    work.append(img);
     works.append(work);
 }
 
