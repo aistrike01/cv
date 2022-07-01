@@ -120,43 +120,48 @@ const languagesArray = {
         ua: "Прикладна інформатика – Інженер-програміст",
         en: "Software – Software Engineer",
     },
+    noworks: {
+        ua: "Немає робіт",
+        en: "No works",
+    },
 };
+
 const languagesButton = document.querySelector(".header__language");
 
-function changeVisualLanguage(language) {
-    languagesButton.style.backgroundImage = `url(../img/languages/${language}.jpg)`;
-    localStorage.setItem("language", language);
+// Sets value on load
+if (localStorage.getItem("language")) {
+    changeLanguage(localStorage.getItem("language"));
+} else {
+    changeLanguage("ua");
+}
+
+function changeLanguage(language) {
+    if (language === "en" || language === "ua") {
+        languagesButton.style.backgroundImage = `url(../img/languages/${language}.jpg)`;
+        localStorage.setItem("language", language);
+
+        document.querySelector("title").innerHTML = languagesArray["title"][language];
+        for (let key in languagesArray) {
+            if (key != "title") {
+                const elem = document.querySelector(".lng-" + key);
+                if (elem) {
+                    elem.innerHTML = languagesArray[key][language];
+                }
+            }
+        }
+    } else {
+        changeLanguage("ua");
+    }
 }
 
 function switchLanguage() {
     const language = localStorage.getItem("language");
-    if (language === "en") {
-        changeVisualLanguage("ua");
-        changeLanguage("ua");
-    } else {
-        changeVisualLanguage("en");
-        changeLanguage("en");
-    }
-}
 
-if (localStorage.getItem("language")) {
-    changeVisualLanguage(localStorage.getItem("language"));
-    changeLanguage(localStorage.getItem("language"));
-} else {
-    changeVisualLanguage("ua");
-    changeLanguage("ua");
+    if (language === "ua") {
+        changeLanguage("en");
+    } else {
+        changeLanguage("ua");
+    }
 }
 
 languagesButton.addEventListener("click", switchLanguage);
-
-function changeLanguage(language) {
-    document.querySelector("title").innerHTML = languagesArray["title"][language];
-    for (let key in languagesArray) {
-        if (key != "title") {
-            const elem = document.querySelector(".lng-" + key);
-            if (elem) {
-                elem.innerHTML = languagesArray[key][language];
-            }
-        }
-    }
-}
