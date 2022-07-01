@@ -84,7 +84,7 @@ const languagesArray = {
         en: "Alekseevich",
     },
     description: {
-        ua: "Front-end програміст зі стажем стажем. Пишу сайти та веб-додатки на JavaScript та TypeScript. Використовую як нативний JavaScript, так і різні JS фреймворки.",
+        ua: "Front-end програміст зі стажем. Пишу сайти та веб-додатки на JavaScript та TypeScript. Використовую як нативний JavaScript, так і різні JS фреймворки.",
         en: "Front-end developer with experience. I write websites and web applications in JavaScript and TypeScript. I use both native JavaScript and various JS frameworks.",
     },
     contacts: {
@@ -104,8 +104,8 @@ const languagesArray = {
         en: employmentTimeEn,
     },
     jobDescription: {
-        ua: "Розробка документообігу на React.",
-        en: "Development of document flow for NFP.",
+        ua: "Працював над документообігом. Технології: TypeScript, React, MUI React. Займався розробкою елементів управління системи та її відображення, всю лицьову частину проекту робив самотужки.",
+        en: "I worked on document management. Technologies: TypeScript, React, MUI React. I was engaged in the development of system control elements and display, I did the entire front part of the project by myself.",
     },
     skills: {
         ua: "Навички",
