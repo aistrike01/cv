@@ -49,9 +49,11 @@ function timeCounter(date, language) {
     return `${years} ${yearWord} ${months} ${monthWord}`;
 }
 
-const employmentDate = document
-    .querySelector(".information-experience__date")
-    .textContent.match(/(0?[1-9]|[12][0-9]|3[01])[\.](0?[1-9]|1[012])[\.]\d{4}/g)[0];
+const employmentDate = document.querySelector(".information-experience__date")
+    ? document
+          .querySelector(".information-experience__date")
+          .textContent.match(/(0?[1-9]|[12][0-9]|3[01])[\.](0?[1-9]|1[012])[\.]\d{4}/g)[0]
+    : "03.03.2022";
 
 const employmentTimeUa = timeCounter(employmentDate, "ua");
 const employmentTimeEn = timeCounter(employmentDate, "en");
