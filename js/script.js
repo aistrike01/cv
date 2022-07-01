@@ -9,6 +9,53 @@ headerBurger.addEventListener("click", () => {
     document.body.classList.toggle("lock");
 });
 
+/// Подсчет времени работы
+
+function timeCounter(date, language) {
+    const dateArray = date.split(".");
+    const newDate = new Date(dateArray[2], --dateArray[1], dateArray[0]);
+    const days = Math.ceil(Math.abs(newDate.getTime() - Date.now()) / (1000 * 3600 * 24));
+    const years = Math.floor(days / 365);
+    let months = Math.floor((days - years * 365) / 30);
+    months === 0 ? (months = 1) : (months = months);
+
+    let monthWord;
+    let yearWord;
+
+    if (months === 1) {
+        language === "ua" ? (monthWord = "місяць") : (monthWord = "month");
+    }
+
+    if (months > 1 && months < 5) {
+        language === "ua" ? (monthWord = "місяці") : (monthWord = "months");
+    }
+
+    if (months > 4) {
+        language === "ua" ? (monthWord = "місяців") : (monthWord = "months");
+    }
+
+    if (years === 1) {
+        language === "ua" ? (yearWord = "рік") : (yearWord = "year");
+    }
+
+    if (years > 1 && years < 5) {
+        language === "ua" ? (yearWord = "роки") : (yearWord = "years");
+    }
+
+    if (years > 4) {
+        language === "ua" ? (yearWord = "років") : (yearWord = "years");
+    }
+
+    return `${years} ${yearWord} ${months} ${monthWord}`;
+}
+
+const employmentDate = document
+    .querySelector(".information-experience__date")
+    .textContent.match(/(0?[1-9]|[12][0-9]|3[01])[\.](0?[1-9]|1[012])[\.]\d{4}/g)[0];
+
+const employmentTimeUa = timeCounter(employmentDate, "ua");
+const employmentTimeEn = timeCounter(employmentDate, "en");
+
 /// Переключение языка
 
 const languagesArray = {
@@ -51,6 +98,10 @@ const languagesArray = {
     job: {
         ua: 'АТ "НЗФ", м. Нікополь – 03.03.2021 - Теперішній час',
         en: 'JSC "NFP", Nikopol – 03.03.2021 - Present',
+    },
+    date: {
+        ua: employmentTimeUa,
+        en: employmentTimeEn,
     },
     jobDescription: {
         ua: "Розробка документообігу на React.",

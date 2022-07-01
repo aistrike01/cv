@@ -101,6 +101,11 @@
     font-size: 20px;
     padding: 0 0 10px 0;
 }
+.information-experience__datetime {
+    color: #1a2933;
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
 .information-experience__description {
     color: #1a2933;
     font-size: 18px;
